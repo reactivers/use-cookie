@@ -1,7 +1,7 @@
 {
   "name": "@reactivers/use-cookie",
   "description": "Cookie management in React with hooks and providers",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "keywords": [
     "hooks",
     "react",

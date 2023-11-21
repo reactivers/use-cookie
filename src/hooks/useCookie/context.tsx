@@ -1,4 +1,4 @@
-import { createContext, FC, useCallback, useContext, useState } from "react";
+import { createContext, FC, useCallback, useContext, useState, PropsWithChildren } from "react";
 import { tryJSONparse, tryJSONStringify, isBrowser } from "../../utils/functions";
 
 interface CookieContext {
@@ -10,10 +10,10 @@ interface CookieContext {
 
 const CookieContext = createContext({} as CookieContext);
 
-interface CookieProviderProps {
+type CookieProviderProps = PropsWithChildren<{
     withState?: boolean;
     onChange?: (cookie: Record<string, any>) => void;
-}
+}>
 
 export interface CookieSetItem {
     key: string,

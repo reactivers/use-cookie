@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 interface CookieContext {
     cookie: Record<string, any>;
     getItem: (key: string) => any;
@@ -6,10 +6,10 @@ interface CookieContext {
     setItem: (params: CookieSetItem) => void;
 }
 declare const CookieContext: import("react").Context<CookieContext>;
-interface CookieProviderProps {
+declare type CookieProviderProps = PropsWithChildren<{
     withState?: boolean;
     onChange?: (cookie: Record<string, any>) => void;
-}
+}>;
 export interface CookieSetItem {
     key: string;
     value: any;
